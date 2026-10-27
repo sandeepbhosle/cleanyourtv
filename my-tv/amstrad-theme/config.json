@@ -1,0 +1,18 @@
+{
+  "library_apps": ["com.netflix.mediaclient"],
+  "dock_apps": [
+    "com.netflix.mediaclient",
+    "com.google.android.youtube.tv",
+    "com.amazon.amazonvideo.livingroom",
+    "in.startv.hotstar"
+  ],
+  "hidden_apps": ["in.startv.hotstartvonly", "com.mediatek.wwtv.tvcenter", "com.mitv.gallery"],
+  "background_color": "#090C14",
+  "wallpaper": true,
+  "cinematic_home": true,
+  "dock_glass": true,
+  "icon_only_buttons": true,
+  "app_glow": true,
+  "glow_style": "horizon",
+  "focus_overshoot": false
+}
