@@ -37,5 +37,10 @@
   "icon_only_buttons": true,
   "app_glow": true,
   "glow_style": "horizon",
-  "focus_overshoot": false
+  "focus_overshoot": false,
+  "app_keys": [
+    "scan:1128:in.startv.hotstar",
+    "scan:1127:com.amazon.amazonvideo.livingroom",
+    "scan:363:input:com.mediatek.tvinput/.hdmi.HDMIInputService/HW4"
+  ]
 }
