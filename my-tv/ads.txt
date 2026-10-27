@@ -1,0 +1,10 @@
+# Amstrad (CloudWalker OS, CVTE board, MediaTek mt5862), Android 9, TVOS-04.16.031.01.12
+# Apply:  TV_HOST=<tv ip> tools/disable.sh my-tv/ads.txt
+# Undo:   TV_HOST=<tv ip> tools/restore.sh my-tv/ads.txt
+# Disabled, never uninstalled. Applied 2026-10-27; still disabled after a reboot.
+#
+# CVTE "pictorial": the advert screensaver (ScreenSaverActivity, "AD A01 / Press back to close")
+# after a few idle minutes, plus Seraphic/Zeasn ad services, a Zeasn ad accessibility service and
+# Sensors Data analytics. With it off: Home (TV Home), Inputs > HDMI 1, JioHotstar and Prime Video
+# still work, and no advert after 10 idle minutes.
+com.cvte.tv.pictorial

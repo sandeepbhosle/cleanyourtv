@@ -14,3 +14,6 @@ TV_HOST=<tv ip> tools/theme.sh my-tv/amstrad-theme
 ```
 
 Undo: `TV_HOST=<tv ip> tools/theme.sh --reset`
+
+`ads.txt`: the one package disabled on this TV, the CVTE advert screensaver and analytics app.
+Undo with `TV_HOST=<tv ip> tools/restore.sh my-tv/ads.txt`.
