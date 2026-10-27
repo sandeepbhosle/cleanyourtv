@@ -41,6 +41,7 @@
   "app_keys": [
     "scan:1128:in.startv.hotstar",
     "scan:1127:com.amazon.amazonvideo.livingroom",
-    "scan:363:input:com.mediatek.tvinput/.hdmi.HDMIInputService/HW4"
+    "scan:363:input:com.mediatek.tvinput/.hdmi.HDMIInputService/HW4",
+    "scan:364:input:com.mediatek.tvinput/.hdmi.HDMIInputService/HW4"
   ]
 }

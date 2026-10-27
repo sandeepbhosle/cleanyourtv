@@ -46,6 +46,28 @@ TV_HOST=<tv ip> tools/venv/bin/python tools/tv.py 'cmd package set-home-activity
 
 Close ADB afterwards: debugging off, reboot, `tools/venv/bin/python tools/adb-closed.py <tv ip>` must say closed.
 
+## Remote buttons
+
+The CVTE hotkey service (`com.cvte.tv.api`) takes the app buttons, but TV Home's `InputKeyService` (an
+accessibility key filter) sees them first. Mapped by scan code in `amstrad-theme/config.json` (`app_keys`):
+
+| Button | Key / scan code | Mapped to |
+|---|---|---|
+| NTX | `KEYCODE_QUICK_START3` / 1128 | JioHotstar (stock: the phone Netflix) |
+| APP STORE | `KEYCODE_QUICK_START2` / 1127 | Prime Video (stock: `com.stark.store`) |
+| Q.VIEW | `KEYCODE_CHANNEL_RECALL` / 363 | HDMI 1, the Tata Play box (`.../HDMIInputService/HW4`) |
+| FAV | `KEYCODE_FAV_LIST` / 364 | HDMI 1 |
+| YouTube | `KEYCODE_QUICK_START1` / 1126 | left to the TV (opens YouTube) |
+
+Turn the helper on (once, and again after every `tools/theme.sh` push, which can leave it enabled but not bound):
+
+```sh
+TV_HOST=<tv ip> tools/venv/bin/python tools/tv.py 'settings put secure enabled_accessibility_services ""; settings put secure accessibility_enabled 0; sleep 1; settings put secure enabled_accessibility_services com.gathin.tvhome/.InputKeyService; settings put secure accessibility_enabled 1'
+```
+
+Off: `settings delete secure enabled_accessibility_services; settings put secure accessibility_enabled 0`
+(both were unset/0 before), or `am force-stop com.gathin.tvhome` until Home restarts.
+
 ## Recovery
 
 | To undo | Command (debugging on) | Without ADB |
