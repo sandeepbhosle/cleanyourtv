@@ -66,7 +66,7 @@ TV_HOST=<tv ip> tools/venv/bin/python tools/tv.py 'settings put secure enabled_a
 ```
 
 Off: `settings delete secure enabled_accessibility_services; settings put secure accessibility_enabled 0`
-(both were unset/0 before), or `am force-stop com.gathin.tvhome` until Home restarts.
+(what `work/a11y-before.txt` recorded before the helper was turned on; check it first), or `am force-stop com.gathin.tvhome` until Home restarts.
 
 ## Recovery
 
